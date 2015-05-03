@@ -212,7 +212,7 @@ func Parse(buf []byte) (*PE, error) {
 	// pefile.py:2093
 	// self.parse_data_directories()
 	// pefile.py:2416
-	for dirEntryType, dirEntry := range p.DataDirectoryEntries {
+	for dirEntryType, _ := range p.DataDirectoryEntries {
 		switch DirectoryEntryType(dirEntryType) {
 		case IMAGE_DIRECTORY_ENTRY_EXPORT:
 		case IMAGE_DIRECTORY_ENTRY_IMPORT:
